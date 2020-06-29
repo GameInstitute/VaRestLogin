@@ -5,21 +5,9 @@ using System.Collections.Generic;
 
 public class SparkfireTarget : TargetRules
 {
-	public SparkfireTarget(TargetInfo Target)
+	public SparkfireTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
-	}
-
-	//
-	// TargetRules interface.
-	//
-
-	public override void SetupBinaries(
-		TargetInfo Target,
-		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
-		ref List<string> OutExtraModuleNames
-		)
-	{
-		OutExtraModuleNames.AddRange( new string[] { "Sparkfire" } );
+		ExtraModuleNames.AddRange( new string[] { "Sparkfire" } );
 	}
 }

@@ -4,7 +4,7 @@ using UnrealBuildTool;
 
 public class Sparkfire : ModuleRules
 {
-	public Sparkfire(TargetInfo Target)
+	public Sparkfire(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
